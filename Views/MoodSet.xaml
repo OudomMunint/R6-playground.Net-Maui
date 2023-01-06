@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="redsix.Views.MoodSet"
+             Title="MoodSet"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="false"
+             BackgroundColor="#242424">
+    
+    <!--Design 1-->
+    <!--<VerticalStackLayout BackgroundColor="#333333">
+        <Label 
+            Text="Carousel design 1"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <CarouselView IndicatorView="Indicator1" HorizontalOptions="Center" VerticalOptions="Center">
+            <CarouselView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Need help</x:String>
+                    <x:String>Happy</x:String>
+                    <x:String>Sad</x:String>
+                    <x:String>Okay</x:String>
+                    <x:String>Extra</x:String>
+                </x:Array>
+            </CarouselView.ItemsSource>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid  HorizontalOptions="FillAndExpand">
+                        <Image   Source="{Binding UserImage}" 
+                                       Aspect="AspectFit"
+                                       HorizontalOptions="FillAndExpand"
+                             />
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+
+        </CarouselView>
+        <IndicatorView x:Name="Indicator1" HorizontalOptions="Center" IndicatorColor="green" SelectedIndicatorColor="DarkGreen"></IndicatorView>
+    </VerticalStackLayout>-->
+    
+    <!--Design 2-->
+    <StackLayout>
+        <!--<Label Grid.Row="1" Text="Lets set your Mood!" TextColor="White" VerticalOptions="End" HorizontalOptions="Center" Margin="0,100,0,0" FontSize="Title" FontAttributes="Bold" Padding="0"/>-->
+        <Label LineBreakMode="WordWrap" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Title" Margin="0,50,0,0" >
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Lets set your" TextColor="White"/>
+                    <Span Text=" Mood!" TextColor="LightGreen"  >
+                    </Span>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+ 
+            <CarouselView IndicatorView="indicator1" Margin="0,100,0,0" IsBounceEnabled="True" ItemsSource="{Binding UserCollection}">
+
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid  HorizontalOptions="FillAndExpand">
+                        <Image   Source="{Binding UserImage}"
+                                       Aspect="AspectFit"
+                                       HorizontalOptions="Center"
+                                     VerticalOptions="Center"
+                             />
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+
+
+        </CarouselView>
+
+        <IndicatorView Grid.Row="1" Margin="0,0,0,150" VerticalOptions="EndAndExpand"   x:Name="indicator1" 
+                       IndicatorSize="10"
+                       IndicatorColor="White"
+                       SelectedIndicatorColor="LawnGreen"
+                       HorizontalOptions="Center" />
+
+
+
+        <Button Text="SET" BackgroundColor="#70FF00" FontSize="Large" TextColor="Black" CornerRadius="14" VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="270" HeightRequest="50" Margin="0,0,0,10" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,0,0,30" Padding="0">
+            <Label Text="Skip for now" TextColor="White" FontSize="Small" FontAttributes="Bold"/>
+            <!--VerticalTextAlignment="Center" HorizontalTextAlignment="Center"-->
+            <!--<Label Text="Sign Up!" TextColor="WhiteSmoke" FontSize="Small" FontAttributes="Bold" Margin="5,0,0,0"/>-->
+            <!--HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"-->
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>
