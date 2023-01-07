@@ -5,85 +5,126 @@
              Title="SignUp"
              NavigationPage.HasNavigationBar="False"
              Shell.NavBarIsVisible="False">
-    <VerticalStackLayout>
-        <Grid Background="#151515">
+
+    <Grid Background="#151515">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <!--Custom shape svg-->
+        <Path Stroke="#005C29" Fill="#70FF00" Data="m0.30001,0l449,0l0,128.48327c-122.5,64.30167 -332.5,65.89076 -449,7.2429c0,-45.25313 0,-90.47304 0,-135.72617z"/>
+        <Image Source="redsix_header_blue.png" WidthRequest="200" Margin="0,0,0,50"/>
+
+        <!--User icon-->
+        <!--<StackLayout>
+            <Frame BackgroundColor="#8CFF8A" HeightRequest="60" WidthRequest="60" CornerRadius="30" Padding="0" Margin="0,200,0,0" HorizontalOptions="Center">
+                --><!--<Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill"/>--><!--
+                <Image Source="https://www.clipartmax.com/png/small/15-153139_big-image-login-icon-with-transparent-background.png" Aspect="AspectFill" />
+            </Frame>
+        </StackLayout>-->
+
+        <!--Greetings text-->
+        <Grid RowSpacing="5" Grid.Row="1" Margin="20,90,20,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="220"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <!--Custom shape svg-->
-            <Path Stroke="#005C29" Fill="#70FF00" Data="m0.30001,0l449,0l0,128.48327c-122.5,64.30167 -332.5,65.89076 -449,7.2429c0,-45.25313 0,-90.47304 0,-135.72617z"/>
-            <Image Source="redsix_header_blue.png" WidthRequest="200" Margin="0,0,0,50"/>
+            <Label Grid.Row="1" Text="Create your Account!" TextColor="White" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0,15,0,0"/>
+            <!--<Label Grid.Row="2" Text="Create your Account!" TextColor="White" HorizontalOptions="Center" FontSize="Subtitle" FontAttributes="Bold" Padding="0" Margin="0,-15,0,0"/>-->
 
-            <!--User icon-->
-            <StackLayout>
-                <Frame BackgroundColor="#8CFF8A" HeightRequest="60" WidthRequest="60" CornerRadius="30" Padding="0" Margin="0,200,0,0" HorizontalOptions="Center">
-                    <!--<Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill"/>-->
-                    <Image Source="https://www.clipartmax.com/png/small/15-153139_big-image-login-icon-with-transparent-background.png" Aspect="AspectFill" />
+            <!--Form fields start-->
+            <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" Margin="0,-30,0,0">
+                <Label Grid.Row="2" Text="Username" TextColor="White" HorizontalOptions="Start" FontSize="Subtitle" FontAttributes="Bold" Padding="0" Margin="5,0,0,10"/>
+                <Frame BackgroundColor="Transparent" BorderColor="white" Padding="5" HorizontalOptions="FillAndExpand" CornerRadius="20" WidthRequest="350">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="40" WidthRequest="40" CornerRadius="30" Margin="3,0,0,0">
+                            <Image Source="username.png" Aspect="AspectFill" Margin="-17"/>
+                        
+                        </Frame>
+                        <Entry  Placeholder="Enter your username" Opacity="0.7" TextColor="white" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,20,0"/>
+                    </StackLayout>
                 </Frame>
-            </StackLayout>
-
-            <!--Greetings text-->
-            <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Label Grid.Row="1" Text="Hello!" TextColor="White" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0"/>
-                <Label Grid.Row="2" Text="Please sign in" TextColor="White" HorizontalOptions="Center" FontSize="Subtitle" FontAttributes="Bold" Padding="0"/>
-
-                <!--Form fields start-->
-                <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand" >
-                    <Frame BackgroundColor="Transparent" BorderColor="white" Padding="5" HorizontalOptions="FillAndExpand" CornerRadius="10" WidthRequest="350">
-                        <StackLayout Orientation="Horizontal">
-                            <!--<Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Margin="5">
-                            -->
-                            <!--<Image Source="https://www.clipartmax.com/png/small/15-153139_big-image-login-icon-with-transparent-background.png" Aspect="AspectFill" Margin="0"/>-->
-                            <!--
-                        </Frame>-->
-                            <Entry Style="{StaticResource Key=baseStyle}" Placeholder="Username" TextColor="white" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,20,0"/>
-                        </StackLayout>
-                    </Frame>
-                    <!--<Frame BorderColor="Transparent">
-                    
+                
+                <!--<Frame BorderColor="Transparent"> 
                 </Frame>-->
-                    <Frame BackgroundColor="Transparent" BorderColor="white" Padding="5" Margin="0,10,0,0" HorizontalOptions="FillAndExpand" CornerRadius="10" WidthRequest="350">
-                        <StackLayout Orientation="Horizontal">
-                            <!--<Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Margin="5">
-                            <Image Source="https://www.clipartmax.com/png/small/15-153139_big-image-login-icon-with-transparent-background.png" Aspect="AspectFill" Margin="0"/>
-                        </Frame>-->
-                            <Entry Style="{StaticResource Key=baseStyle}" Placeholder="Password" TextColor="White" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,20,0"/>
-                        </StackLayout>
-                    </Frame>
-                    <!--Form fields start-->
 
-                    <!-- Exception start-->
-                    <StackLayout Orientation="Horizontal" Margin="0,10,10,0">
-                        <CheckBox IsChecked="False"/>
-                        <Label Text="Remember Me" TextColor="White" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-                        <Label Text="Forgot Passowrd" TextColor="White" FontAttributes="Bold" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Label Grid.Row="2" Text="Email" TextColor="White" HorizontalOptions="Start" FontSize="Subtitle" FontAttributes="Bold" Padding="0" Margin="5,20,0,10"/>
+                <Frame BackgroundColor="Transparent" BorderColor="white" Padding="5" HorizontalOptions="FillAndExpand" CornerRadius="20" WidthRequest="350">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="40" WidthRequest="40" CornerRadius="30" Margin="3,0,0,0">
+                            <Image Source="email.png" Aspect="AspectFit" Margin="-16"/>
+
+                        </Frame>
+                        <Entry  Placeholder="Enter your email" Opacity="0.7" TextColor="white" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,20,0"/>
                     </StackLayout>
-                    <!-- Exception end-->
+                </Frame>
 
-                    <!-- Sign in btn-->
-                    <Button Text="Sign in" BackgroundColor="#70FF00" FontSize="Subtitle" TextColor="Black" FontAttributes="Bold" CornerRadius="10" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="200" HeightRequest="41" Margin="0,30,0,0" />
+                <Label Grid.Row="2" Text="Password" TextColor="White" HorizontalOptions="Start" FontSize="Subtitle" FontAttributes="Bold" Padding="0" Margin="5,20,0,0"/>
+                <Frame BackgroundColor="Transparent" BorderColor="white" Padding="5" Margin="0,10,0,0" HorizontalOptions="FillAndExpand" CornerRadius="20" WidthRequest="350">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="40" WidthRequest="40" CornerRadius="30" Margin="3,0,0,0">
+                            <Image Source="lock.png" Aspect="AspectFit" Margin="-15"/>
 
-                    <!-- Sign up link-->
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0" Padding="0">
-                        <Label Text="New to REDSIX?" TextColor="White" FontSize="Small"/>
-                        <!--VerticalTextAlignment="Center" HorizontalTextAlignment="Center"-->
-                        <Label Text="Sign Up!" TextColor="WhiteSmoke" FontSize="Small" FontAttributes="Bold" Margin="5,0,0,0"/>
-                        <!--HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"-->
+                        </Frame>
+                        <Entry  Placeholder="Enter your password" Opacity="0.7" TextColor="White" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,20,0"/>
                     </StackLayout>
+                </Frame>
 
+                <Label Grid.Row="2" Text="Confirm Password" TextColor="White" HorizontalOptions="Start" FontSize="Subtitle" FontAttributes="Bold" Padding="0" Margin="5,20,0,0"/>
+                <Frame BackgroundColor="Transparent" BorderColor="white" Padding="5" Margin="0,10,0,30" HorizontalOptions="FillAndExpand" CornerRadius="20" WidthRequest="350">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="Transparent" BorderColor="Transparent" HeightRequest="40" WidthRequest="40" CornerRadius="30" Margin="3,0,0,0">
+                            <Image Source="verify.png" Aspect="AspectFit" Margin="-14"/>
+
+                        </Frame>
+                        <Entry  Placeholder="Confirm your password" Opacity="0.7" TextColor="White" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,20,0"/>
+                    </StackLayout>
+                </Frame>
+                <!--Form fields end-->
+
+                <!-- Exception start-->
+                <!--<StackLayout Orientation="Horizontal" Margin="0,10,10,0">
+                    <CheckBox IsChecked="False"/>
+                    <Label Text="Remember Me" TextColor="White" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="Forgot Passowrd" TextColor="White" FontAttributes="Bold" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </StackLayout>-->
+                <!-- Exception end-->
+
+                <!-- Sign in btn-->
+                <Button Text="Continue" BackgroundColor="#70FF00" FontSize="Medium" TextColor="Black" FontAttributes="Bold" CornerRadius="10" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="340" HeightRequest="50" Margin="0,20,0,0" />
+
+                <!-- Sign up link-->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0" Padding="0">
+                    <Label Text="Already Have an account?" TextColor="White" FontSize="Medium"/>
+                    <!--VerticalTextAlignment="Center" HorizontalTextAlignment="Center"-->
+                    <Label Text="Sign in!" TextColor="WhiteSmoke" FontSize="Medium" FontAttributes="Bold" Margin="5,0,0,0"/>
+                    <!--HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"-->
                 </StackLayout>
-            </Grid>
+
+                <Label LineBreakMode="WordWrap" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Small" Margin="0,10,0,0" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontSize="Small" Text="By continuing you agree to the" TextColor="White"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label LineBreakMode="WordWrap" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Small" Margin="0,0,0,0" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontSize="Small" Text=" Terms" TextColor="LightGreen" />
+                            <Span FontSize="Small" Text=" &amp; " TextColor="White"/>
+                            <Span FontSize="Small" Text=" Condition" TextColor="LightGreen" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+            </StackLayout>
         </Grid>
-    </VerticalStackLayout>
+    </Grid>
 </ContentPage>
