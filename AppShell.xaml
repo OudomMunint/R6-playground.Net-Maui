@@ -12,4 +12,6 @@
         ContentTemplate="{DataTemplate local:SignUp}"
         Route="MainPage" />
         <!--ContentTemplate="{DataTemplate views:DomTestPage}"-->
+        <!--ContentTemplate="{DataTemplate local:SignUp}"-->
+        <!--ContentTemplate="{DataTemplate local:SignUp}"-->
 </Shell>
