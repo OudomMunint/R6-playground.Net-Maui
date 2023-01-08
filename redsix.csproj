@@ -77,6 +77,9 @@
 	  <MauiXaml Update="Views\DomTestPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Login.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\MoodSet.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
