@@ -37,7 +37,7 @@
 
             <!-- Greetings text & Sign up link-->
             <Label Grid.Row="1" Text="Create your Account!" TextColor="White" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0,-40,0,0"/>
-            <Label Grid.Row="2" Text="Already have an account? Sign in!" TextColor="White" HorizontalOptions="Center" FontSize="Subtitle" FontAttributes="Bold" Padding="0" Margin="0,-50,0,0"/>
+            <Label Grid.Row="2" Text="Already have an account? Sign in!" TextColor="White" HorizontalOptions="Center" FontSize="Small" FontAttributes="Bold" Padding="0" Margin="0,-50,0,0"/>
 
 
 
