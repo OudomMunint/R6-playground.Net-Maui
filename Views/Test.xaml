@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="redsix.Views.Test"
+             Title="Test">
+    <Grid RowSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <CarouselView ItemsSource="{Binding Zoos}" x:Name="CarouselZoos" Grid.ColumnSpan="3">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.RowSpan="2" Aspect="AspectFill" Source="{Binding ImageUrl}"/>
+                        <StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
+                            <Label TextColor="White" Text="{Binding Name}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <!--<Button  Text="pre" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" ></Button>
+        <Button  Text="next" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" ></Button>-->
+        <ImageButton Source="back.png" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"/>
+        <ImageButton Source="forward.png" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" />
+    </Grid>
+</ContentPage>
