@@ -9,9 +9,10 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:Login}"
+        ContentTemplate="{DataTemplate local:SignUp}"
         Route="MainPage" />
         <!--ContentTemplate="{DataTemplate views:DomTestPage}"-->
         <!--ContentTemplate="{DataTemplate local:MoodSet}"-->
         <!--ContentTemplate="{DataTemplate local:SignUp}"-->
+        <!--ContentTemplate="{DataTemplate local:Login}-->
 </Shell>
