@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="redsix.Views.Carosel"
+             Title="Carosel"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False">
+    <Grid RowSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <CarouselView IndicatorView="indicator1" Margin="0,0,0,0" IsBounceEnabled="True" ItemsSource="{Binding UserCollection}" Grid.ColumnSpan="3">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid  HorizontalOptions="FillAndExpand">
+                        <Image   Source="{Binding UserImage}"
+                                       Aspect="AspectFit"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       HeightRequest="250"
+                             />
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView Grid.ColumnSpan="3" Margin="0,0,0,200" VerticalOptions="End"   x:Name="indicator1" 
+                       IndicatorSize="10"
+                       IndicatorColor="Grey"
+                       SelectedIndicatorColor="Black"
+                       HorizontalOptions="Center" />
+        <!--<Button  Text="pre" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" ></Button>
+        <Button  Text="next" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" ></Button>-->
+        <ImageButton Source="back.png" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" Margin="20,0,0,0"/>
+        <ImageButton Source="forward.png" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" />
+    </Grid>
+</ContentPage>
