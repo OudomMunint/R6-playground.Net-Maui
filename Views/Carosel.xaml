@@ -36,5 +36,14 @@
         <Button  Text="next" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" ></Button>-->
         <ImageButton x:Name="pre" Source="back.png" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" Margin="20,0,0,0" Clicked="Prepage"/>
         <ImageButton x:Name="next" Source="forward.png" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" Clicked="Nextpage" />
+        
+        <Button Text="SET" BackgroundColor="#70FF00" FontSize="Large" TextColor="Black" CornerRadius="14" VerticalOptions="End" HorizontalOptions="Center" WidthRequest="270" HeightRequest="50" Margin="270,0,0,50" />
+
+        <Label Grid.ColumnSpan="3" Text="Skip for now" TextColor="White" FontSize="Small" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,20"/>
+            <!--VerticalTextAlignment="Center" HorizontalTextAlignment="Center"-->
+            <!--<Label Text="Sign Up!" TextColor="WhiteSmoke" FontSize="Small" FontAttributes="Bold" Margin="5,0,0,0"/>-->
+            <!--HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"-->
+
     </Grid>
+    
 </ContentPage>
