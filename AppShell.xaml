@@ -9,7 +9,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:SignUp}"
+        ContentTemplate="{DataTemplate local:Carosel}"
         Route="MainPage" />
         <!--ContentTemplate="{DataTemplate views:DomTestPage}"-->
         <!--ContentTemplate="{DataTemplate local:MoodSet}"-->
