@@ -4,14 +4,16 @@
              x:Class="redsix.Views.Carosel"
              Title="Carosel"
              NavigationPage.HasNavigationBar="False"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#242424">
+    
     <Grid RowSpacing="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <CarouselView IndicatorView="indicator1" Margin="0,0,0,0" IsBounceEnabled="True" ItemsSource="{Binding UserCollection}" Grid.ColumnSpan="3">
+        <CarouselView IndicatorView="indicator1" Margin="0,0,0,0" IsBounceEnabled="True" ItemsSource="{Binding UserCollection}" Grid.ColumnSpan="3" x:Name="CarouselZoos">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <Grid  HorizontalOptions="FillAndExpand">
@@ -28,11 +30,11 @@
         <IndicatorView Grid.ColumnSpan="3" Margin="0,0,0,200" VerticalOptions="End"   x:Name="indicator1" 
                        IndicatorSize="10"
                        IndicatorColor="Grey"
-                       SelectedIndicatorColor="Black"
+                       SelectedIndicatorColor="LawnGreen"
                        HorizontalOptions="Center" />
         <!--<Button  Text="pre" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" ></Button>
         <Button  Text="next" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" ></Button>-->
-        <ImageButton Source="back.png" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" Margin="20,0,0,0"/>
-        <ImageButton Source="forward.png" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" />
+        <ImageButton x:Name="pre" Source="back.png" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" Margin="20,0,0,0" Clicked="Prepage"/>
+        <ImageButton x:Name="next" Source="forward.png" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" Clicked="Nextpage" />
     </Grid>
 </ContentPage>
