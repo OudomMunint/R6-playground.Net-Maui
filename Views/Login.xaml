@@ -73,10 +73,10 @@
 
                 <!-- Sign in btn-->
                 <Button Text="Continue" BackgroundColor="#70FF00" FontSize="Medium" TextColor="Black" FontAttributes="Bold" CornerRadius="10" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="340" HeightRequest="50" Margin="0,20,0,0" />
-
-                <Label Text="Or" TextColor="White" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,10,0,0"/>
-
-                <ImageButton Source="fixed.png" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,7,0,0" />
+                
+                <!--Google btn-->
+                <!--<Label Text="Or" TextColor="White" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,10,0,0"/>-->
+                <!--<ImageButton Source="fixed.png" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,7,0,0" />-->
 
                 <!-- Sign up link-->
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0" Padding="0">
