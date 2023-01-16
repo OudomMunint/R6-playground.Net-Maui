@@ -41,7 +41,7 @@
                        IndicatorColor="Grey"
                        SelectedIndicatorColor="LawnGreen"
                        HorizontalOptions="Center" />
-        <Image Source="info_current_mood.png" HorizontalOptions="Center" VerticalOptions="Center" Grid.ColumnSpan="3" WidthRequest="150" Margin="0,320,0,0"/>
+        <!--<Image Source="info_current_mood.png" HorizontalOptions="Center" VerticalOptions="Center" Grid.ColumnSpan="3" WidthRequest="150" Margin="0,320,0,0"/>-->
         <!--<Button  Text="pre" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" ></Button>
         <Button  Text="next" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" ></Button>-->
         <ImageButton x:Name="pre" Source="back.png" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" Margin="0,-300,0,0" Clicked="Prepage"/>
