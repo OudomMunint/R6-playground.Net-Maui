@@ -94,8 +94,4 @@
 	  </MauiXaml>
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Auth\" />
-	</ItemGroup>
-
 </Project>
