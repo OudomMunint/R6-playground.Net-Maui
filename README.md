@@ -1,6 +1,7 @@
 # PDS Redsix Local Dev environment
 ## To be merged with PDS.RedSix.App
 ## Pipeline builds for STG and PROD
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 - Android: [![Build Status](https://dev.azure.com/pdsglobal/PDS/_apis/build/status/Android/Android.Phone%20(PRD)?branchName=PRD)](https://dev.azure.com/pdsglobal/PDS/_build/latest?definitionId=66&branchName=PRD)
 - IOS: [![Build Status](https://dev.azure.com/pdsglobal/PDS/_apis/build/status/iOS/iOS.iPad%20(PRD)?branchName=PRD)](https://dev.azure.com/pdsglobal/PDS/_build/latest?definitionId=78&branchName=PRD)
 - API: [![Build Status](https://dev.azure.com/pdsglobal/PDS/_apis/build/status/API/Java%20(PRD)?branchName=PRD)](https://dev.azure.com/pdsglobal/PDS/_build/latest?definitionId=59&branchName=PRD)
