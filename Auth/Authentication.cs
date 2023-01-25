@@ -1,95 +1,97 @@
-﻿using Android.Gms.Extensions;
-using Firebase.Auth;
-using System;
-using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using ToDoApp.Auth;
-using ToDoApp.Models;
+using static redsix.Auth.Authentication;
 
-namespace ToDoApp.Droid.Auth
+namespace redsix.Auth
 {
-    public class FirebaseAuthentication : IFirebaseAuthentication
+    class Authentication
     {
-        public async Task<UserModel> LoginWithEmailAndPassword(string email, string password)
+        public class FirebaseAuthentication : IFirebaseAuthentication
         {
-            try
+            public async Task<UserModel> LoginWithEmailAndPassword(string email, string password)
             {
-                var firebaseUser = await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
-                var token = await firebaseUser.User.GetIdToken(false).AsAsync<GetTokenResult>();
-                var user = new UserModel()
+                try
                 {
-                    DisplayName = firebaseUser.User.DisplayName,
-                    Email = firebaseUser.User.Email,
-                    Token = token.Token
-                };
-                return user;
+                    var firebaseUser = await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
+                    var token = await firebaseUser.User.GetIdToken(false).AsAsync<GetTokenResult>();
+                    var user = new UserModel()
+                    {
+                        DisplayName = firebaseUser.User.DisplayName,
+                        Email = firebaseUser.User.Email,
+                        Token = token.Token
+                    };
+                    return user;
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex);
+                    return null;
+                }
             }
-            catch (Exception ex)
+
+            public async Task<bool> RegisterWithEmailAndPassword(string username, string email, string password)
             {
-                Debug.WriteLine(ex);
-                return null;
+                try
+                {
+                    var result = await FirebaseAuth.Instance.CreateUserWithEmailAndPasswordAsync(email, password);
+                    var userProfileBuilder = new UserProfileChangeRequest.Builder();
+                    userProfileBuilder.SetDisplayName(username);
+                    await result.User.UpdateProfileAsync(userProfileBuilder.Build());
+                    return result.User != null;
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex);
+                    return false;
+                }
             }
-        }
 
-        public async Task<bool> RegisterWithEmailAndPassword(string username, string email, string password)
-        {
-            try
+            public async Task ForgetPassword(string email)
             {
-                var result = await FirebaseAuth.Instance.CreateUserWithEmailAndPasswordAsync(email, password);
-                var userProfileBuilder = new UserProfileChangeRequest.Builder();
-                userProfileBuilder.SetDisplayName(username);
-                await result.User.UpdateProfileAsync(userProfileBuilder.Build());
-                return result.User != null;
+                try
+                {
+                    await FirebaseAuth.Instance.SendPasswordResetEmailAsync(email);
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex);
+                }
             }
-            catch (Exception ex)
+
+            public string GetUsername()
             {
-                Debug.WriteLine(ex);
-                return false;
+                var user = FirebaseAuth.Instance.CurrentUser;
+                return user?.DisplayName;
             }
-        }
 
-        public async Task ForgetPassword(string email)
-        {
-            try
+            public string GetUserId()
             {
-                await FirebaseAuth.Instance.SendPasswordResetEmailAsync(email);
+                var user = FirebaseAuth.Instance.CurrentUser;
+                return user?.Uid;
             }
-            catch (Exception ex)
+
+
+            public bool IsLoggedIn()
             {
-                Debug.WriteLine(ex);
+                var user = FirebaseAuth.Instance.CurrentUser;
+                return user != null;
             }
-        }
 
-        public string GetUsername()
-        {
-            var user = FirebaseAuth.Instance.CurrentUser;
-            return user?.DisplayName;
-        }
-
-        public string GetUserId()
-        {
-            var user = FirebaseAuth.Instance.CurrentUser;
-            return user?.Uid;
-        }
-
-
-        public bool IsLoggedIn()
-        {
-            var user = FirebaseAuth.Instance.CurrentUser;
-            return user != null;
-        }
-
-        public bool LogOut()
-        {
-            try
+            public bool LogOut()
             {
-                FirebaseAuth.Instance.SignOut();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-                return false;
+                try
+                {
+                    FirebaseAuth.Instance.SignOut();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex);
+                    return false;
+                }
             }
         }
     }
