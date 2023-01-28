@@ -49,6 +49,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Auth\**" />
+	  <Compile Remove="Auth\**" />
+	  <EmbeddedResource Remove="Auth\**" />
+	  <MauiCss Remove="Auth\**" />
+	  <MauiXaml Remove="Auth\**" />
+	  <None Remove="Auth\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Images\mood_circle_black.png" />
 	  <None Remove="Resources\Images\mood_circle_black_flat.png" />
 	  <None Remove="Resources\Images\mood_circle_blue.png" />
@@ -87,6 +96,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SignUp.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\sticky.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Test.xaml">
