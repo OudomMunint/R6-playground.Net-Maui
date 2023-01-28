@@ -9,7 +9,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:sticky}"
+        ContentTemplate="{DataTemplate local:Sticky}"
         Route="MainPage" />
         <!--ContentTemplate="{DataTemplate views:DomTestPage}"-->
         <!--ContentTemplate="{DataTemplate local:MoodSet}"-->

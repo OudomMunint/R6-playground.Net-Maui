@@ -83,6 +83,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\sticky.xaml.cs">
+	    <DependentUpon>Sticky.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Views\Carosel.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -98,7 +104,7 @@
 	  <MauiXaml Update="Views\SignUp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\sticky.xaml">
+	  <MauiXaml Update="Views\Sticky.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Test.xaml">
