@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="redsix.Views.sticky"
+             Title="sticky">
+    <VerticalStackLayout>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" x:Name="Header">
+                    <HorizontalStackLayout VerticalOptions="Center" x:Name="Header">
+                        <Image VerticalOptions="Center"
+                    Margin="5,15,15,0"
+                    Source="user_icon.png"
+                    WidthRequest="55"
+                    HeightRequest="55"
+                    Aspect="AspectFit"/>
+
+                        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
+                            <!--<Label 
+                        Margin="15,30,15,0"
+                        Style="{StaticResource Key=baseLabelStyle}" 
+                        Text="What's on your mind?"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        />-->
+                            <Frame
+                                Margin="-10,15,0,0"
+                                HeightRequest="50"
+                                BorderColor="LightGray"
+                                CornerRadius="15"
+                                BackgroundColor="White">
+                                <Entry
+                                    Placeholder="What's Happening?"
+                                    FontSize="15"
+                                    FontAttributes="Bold"
+                                    TextColor="DarkGray"
+                                    HeightRequest="50"
+                                    WidthRequest="230">
+                                </Entry>
+
+                            </Frame>
+
+                        </StackLayout>
+                        <Button WidthRequest="60" HeightRequest="50" HorizontalOptions="StartAndExpand" VerticalOptions="Center" CornerRadius="15" Margin="7,15,0,0" Text="Post" FontSize="15" BackgroundColor="{DynamicResource DarkButtonColor}"></Button>
+                    </HorizontalStackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="1" x:Name="Content">
+                    <Grid Margin="0, 15, 0,0" Padding="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="8"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Row="0" Grid.Column="0"
+                    VerticalOptions="End"
+                    Text="Community" 
+                    TextColor="{DynamicResource Secondary}"
+                    FontSize="17"
+                    BackgroundColor="Transparent"/>
+
+                        <Button Grid.Row="0" Grid.Column="1"
+                    VerticalOptions="End"
+                    Text="Connect" 
+                    TextColor="DarkGray"
+                    FontSize="17"
+                    BackgroundColor="Transparent"/>
+
+                        <!--<Label  Grid.Row="1" Grid.Column="0"
+                    BackgroundColor="{DynamicResource Secondary}"
+                    Text=" "
+                    TextColor="Black"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    Margin="0"/>
+
+                        <Label  Grid.Row="1" Grid.Column="1"
+                    BackgroundColor="White"
+                    Text=""
+                    TextColor="White"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    Margin="0"/>-->
+
+                    </Grid>
+
+                    <HorizontalStackLayout>
+                        <Image
+                    Margin="15,0,15,0"
+                    Source="user2_icon.png"
+                    WidthRequest="68"
+                    HeightRequest="65"
+                    Aspect="AspectFit"/>
+
+                        <StackLayout>
+                            <Label 
+                        Style="{StaticResource Key=baseLabelStyle}" 
+                        Margin="15,10,15,5"
+                        Text="Michael Jones"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        />
+                            <Label 
+                        Style="{StaticResource Key=baseLabelStyle}" 
+                        Text="5th January 11:48 am"
+                        FontSize="16"
+                        Margin="15,0,15,10"/>
+                        </StackLayout>
+                    </HorizontalStackLayout>
+
+                    <Label 
+                Style="{StaticResource Key=baseLabelStyle}" 
+                Text="Went for a ride over the weekend to clear my head. The ride was awesome and the views at the beach were great. Anyone else love riding their bike on the weekend? Hit me up if you're up for a ride!"
+                FontSize="16"
+                FontAttributes="Bold"
+                Margin="20, 10"/>
+
+                    <Image
+                Aspect="AspectFit"
+                Margin="10, 0"
+                HorizontalOptions="Center"
+                Source="bike_scene.png" />
+
+                    <Grid Margin="15,10,15,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label HorizontalOptions="Fill" Grid.Column="0"
+                        Style="{StaticResource Key=baseLabelStyle}" 
+                        
+                        Text="Jon Doe and others like this"
+                        FontSize="12"
+                         TextColor="DarkGray"
+                        />
+                        <Label HorizontalOptions="End" Grid.Column="1"
+                        Style="{StaticResource Key=baseLabelStyle}" 
+                        Text="10 comments"
+                        FontSize="12"
+                        TextColor="DarkGray"
+                        />
+                    </Grid>
+
+
+                    <HorizontalStackLayout>
+                        <Image
+                    Margin="15,0,15,0"
+                    Source="user2_icon.png"
+                    WidthRequest="68"
+                    HeightRequest="65"
+                    Aspect="AspectFit"/>
+
+                        <StackLayout>
+                            <Label 
+                        Style="{StaticResource Key=baseLabelStyle}" 
+                        Margin="15,10,15,5"
+                        Text="Michael Jones"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        />
+                            <Label 
+                        Style="{StaticResource Key=baseLabelStyle}" 
+                        Text="5th January 11:48 am"
+                        FontSize="16"
+                        Margin="15,0,15,10"/>
+                        </StackLayout>
+                    </HorizontalStackLayout>
+
+                    <Label 
+                Style="{StaticResource Key=baseLabelStyle}" 
+                Text="Went for a ride over the weekend to clear my head. The ride was awesome and the views at the beach were great. Anyone else love riding their bike on the weekend? Hit me up if you're up for a ride!"
+                FontSize="16"
+                FontAttributes="Bold"
+                Margin="20, 10"/>
+
+                    <Image
+                Aspect="AspectFit"
+                Margin="10, 0"
+                HorizontalOptions="Center"
+                Source="bike_scene.png" />
+
+                    <Grid Margin="15,10,15,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label HorizontalOptions="Fill" Grid.Column="0"
+                        Style="{StaticResource Key=baseLabelStyle}" 
+                        
+                        Text="Jon Doe and others like this"
+                        FontSize="12"
+                         TextColor="DarkGray"
+                        />
+                        <Label HorizontalOptions="End" Grid.Column="1"
+                        Style="{StaticResource Key=baseLabelStyle}" 
+                        Text="10 comments"
+                        FontSize="12"
+                        TextColor="DarkGray"
+                        />
+                    </Grid>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>
