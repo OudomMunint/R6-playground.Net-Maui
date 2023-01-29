@@ -1,3 +1,4 @@
 {
-
+  "G-AuthApiBaseUrl": "https://api.openweathermap.org/data/2.5",
+  "G-AuthMapApiKey": "b1a70670143252b81dbd8fda5143d9d4"
 }
