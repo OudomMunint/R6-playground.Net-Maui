@@ -4,6 +4,7 @@ using CommunityToolkit.Maui;
 namespace redsix;
 
 using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Markup;
 
 public static class MauiProgram
 {
@@ -20,6 +21,8 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
+        // Initialise the toolkit
+        builder.UseMauiApp<App>().UseMauiCommunityToolkitMarkup();
 
         // Continue initializing your .NET MAUI App here
 
