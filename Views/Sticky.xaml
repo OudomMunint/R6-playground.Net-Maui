@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="redsix.Views.Sticky"
+             Title="sticky"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False">
+    <Grid RowSpacing="0" ColumnSpacing="0">
+        <Grid.Margin>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="0,20,0,0" />
+            </OnPlatform>
+        </Grid.Margin>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Text="FIXED HEADER DEMO" Margin="12" Grid.Row="0" FontSize="14" />
+        <Grid x:Name="ContentGrid" RowSpacing="0" ColumnSpacing="0" Grid.Row="1">
+            <ScrollView x:Name="TheScroll">
+                <Grid RowSpacing="0" ColumnSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition x:Name="ImageRow" Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Image x:Name="BearImage" Source="bike_scene.jpg"
+                       Aspect="AspectFill"
+                       Grid.Row="0" />
+                    <Image  Source="bike_scene.jpg"
+                       Aspect="AspectFill"
+                       Grid.Row="0" />
+                    <Label LineBreakMode="WordWrap"
+                       Margin="12,5,12,5"
+                       Grid.Row="1">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Never heard before, but a bear was found in the wild!" FontAttributes="Bold" FontSize="18" />
+                                <Span Text="xxxNever heard before, but a bear was found in the wild!Never heard before, but a bear was found in the wild!Never heard before, but a bear was found in the wild!Never heard before, but a bear was found in the wild!Never heard before, but a bear was found in the wild!Never heard before, but a bear was found in the wild!Never heard before, but a bear was found in the wild!Never heard before, but a bear was found in the wild!Never heard before, but a bear was found in the wild!" FontSize="14" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                        
+                    </Label>
+                    
+                </Grid>
+            </ScrollView>
+
+
+            <ScrollView x:Name="TitleText" Orientation="Horizontal" HeightRequest="40" VerticalOptions="Start" HorizontalOptions="Center">
+                <StackLayout Orientation="Horizontal"  Spacing="-8">
+                    <Button Text="Test1" />
+                    <Button Text="Test2"/>
+                    <Button Text="Test3"/>
+                    <Button Text="Test4"/>
+                    <Button Text="Test5"/>
+                    <Button Text="Test6"/>
+                </StackLayout>
+            </ScrollView>
+
+
+            <!--<Label x:Name="TitleText"
+               Text="Bear found in the wild!"
+               TextColor="White"
+               BackgroundColor="#FF264778"
+               HeightRequest="40"
+               VerticalOptions="Start" VerticalTextAlignment="Center"                   
+               HorizontalTextAlignment="Center" />-->
+        </Grid>
+    </Grid>
+</ContentPage>

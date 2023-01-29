@@ -1,11 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
-
-namespace redsix;
-
-using CommunityToolkit.Maui;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Markup;
+
+namespace redsix;
 
 public static class MauiProgram
 {
