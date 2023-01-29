@@ -26,6 +26,9 @@
                     <Image x:Name="BearImage" Source="bike_scene.jpg"
                        Aspect="AspectFill"
                        Grid.Row="0" />
+                    <Image  Source="bike_scene.jpg"
+                       Aspect="AspectFill"
+                       Grid.Row="0" />
                     <Label LineBreakMode="WordWrap"
                        Margin="12,5,12,5"
                        Grid.Row="1">
@@ -37,9 +40,7 @@
                         </Label.FormattedText>
                         
                     </Label>
-                    <Image  Source="bike_scene.jpg"
-                       Aspect="AspectFill"
-                       Grid.Row="0" />
+                    
                 </Grid>
             </ScrollView>
 
