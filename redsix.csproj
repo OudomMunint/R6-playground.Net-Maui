@@ -107,6 +107,9 @@
 	  <MauiXaml Update="Views\SignUp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\social.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Sticky.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
