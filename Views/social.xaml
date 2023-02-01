@@ -5,13 +5,13 @@
              Title="social"
              NavigationPage.HasNavigationBar="False"
              Shell.NavBarIsVisible="False">
-    <ContentPage.Resources>
+    <!--<ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="baseLabelStyle" TargetType="Label">
                 <Setter Property="FontFamily" Value="Arial" />
             </Style>
         </ResourceDictionary>
-    </ContentPage.Resources>
+    </ContentPage.Resources>-->
 
     <ScrollView>
         <StackLayout>
