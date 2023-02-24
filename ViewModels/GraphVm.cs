@@ -24,9 +24,9 @@ namespace redsix.ViewModels
             Data = new ObservableCollection<Sales>(new GraphVm().Data);
             CustomBrushes = new List<Brush>
             {
-                new SolidColorBrush(Color.FromRgb(0, 0, 0)),
-                new SolidColorBrush(Color.FromRgb(0, 0, 0)),
-                new SolidColorBrush(Color.FromRgb(0, 0, 0)),
+                new SolidColorBrush(Color.FromRgb(255, 0, 0)),
+                new SolidColorBrush(Color.FromRgb(0, 255, 0)),
+                new SolidColorBrush(Color.FromRgb(0, 255, 0)),
                 new SolidColorBrush(Color.FromRgb(0, 0, 0)),
                 new SolidColorBrush(Color.FromRgb(0, 0, 0))
             };

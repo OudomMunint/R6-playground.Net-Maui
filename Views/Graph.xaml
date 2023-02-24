@@ -4,25 +4,38 @@
              xmlns:vm="clr-namespace:redsix.ViewModels;assembly=redsix"
              x:Class="redsix.Views.Graph"
              Title="Graph">
-
-    <chart:SfCircularChart>
-        <chart:SfCircularChart.Title>
-            <Label Text="Your Mood History" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Title" TextColor="Black"/>
-        </chart:SfCircularChart.Title>
-        <chart:SfCircularChart.Legend>
-            <chart:ChartLegend/>
-        </chart:SfCircularChart.Legend>
-
-        <chart:SfCircularChart.BindingContext>
-            <vm:GraphVm/>
-        </chart:SfCircularChart.BindingContext>
-        <chart:PieSeries ItemsSource="{Binding Data}" 
+    <ScrollView>
+    <StackLayout Orientation="Horizontal">
+        <chart:SfCircularChart WidthRequest="300" HeightRequest="300">
+            <chart:DoughnutSeries ItemsSource="{Binding Data}" 
                     XBindingPath="Mood" 
                     YBindingPath="Frequency"
                     ShowDataLabels="True"
                     EnableAnimation="True"
                     EnableTooltip="True"
+                    ExplodeIndex="20"
+					ExplodeRadius="100"
+					ExplodeOnTouch="True"
                     PaletteBrushes="{Binding CustomBrushes}"/>
-    </chart:SfCircularChart>
+            <chart:SfCircularChart.BindingContext>
+                <vm:GraphVm/>
+            </chart:SfCircularChart.BindingContext>
+        </chart:SfCircularChart>
+
+        <chart:SfCircularChart WidthRequest="300" HeightRequest="300">
+            <chart:PieSeries ItemsSource="{Binding Data}"
+                              XBindingPath="Mood"
+                              YBindingPath="Frequency"
+                              ShowDataLabels="True"
+                              EnableAnimation="True"
+                              EnableTooltip="True"
+                              PaletteBrushes="{Binding CustomBrushes}"/>
+            <chart:SfCircularChart.BindingContext>
+                <vm:GraphVm/>
+            </chart:SfCircularChart.BindingContext>
+        </chart:SfCircularChart>
+    </StackLayout>
+    </ScrollView>
+
 
 </ContentPage>
