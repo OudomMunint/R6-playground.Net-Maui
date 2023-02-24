@@ -2,6 +2,12 @@
 using CommunityToolkit.Maui;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Markup;
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
 
 namespace redsix;
 
@@ -24,6 +30,15 @@ public static class MauiProgram
             builder.UseMauiApp<App>().UseMauiCommunityToolkitMarkup();
             // Initialise the maui toolkit core
             builder.UseMauiApp<App>().UseMauiCommunityToolkitCore();
+
+        // Initilise Syncfusion charts
+        builder
+        .UseMauiApp<App>()
+        .ConfigureSyncfusionCore()
+        .ConfigureFonts(fonts =>
+        {
+            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+        });
 
         // Continue initializing your .NET MAUI App here
 
