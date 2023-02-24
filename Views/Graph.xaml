@@ -1,0 +1,27 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:vm="clr-namespace:redsix.ViewModels;assembly=redsix"
+             x:Class="redsix.Views.Graph"
+             Title="Graph">
+
+    <chart:SfCircularChart>
+        <chart:SfCircularChart.Title>
+            <Label Text="Your Mood History" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Title" TextColor="Black"/>
+        </chart:SfCircularChart.Title>
+        <chart:SfCircularChart.Legend>
+            <chart:ChartLegend/>
+        </chart:SfCircularChart.Legend>
+
+        <chart:SfCircularChart.BindingContext>
+            <vm:GraphVm/>
+        </chart:SfCircularChart.BindingContext>
+        <chart:PieSeries ItemsSource="{Binding Data}" 
+                    XBindingPath="Mood" 
+                    YBindingPath="Frequency"
+                         ShowDataLabels="True"
+                         EnableAnimation="True"
+                         EnableTooltip="True"/>
+    </chart:SfCircularChart>
+
+</ContentPage>
