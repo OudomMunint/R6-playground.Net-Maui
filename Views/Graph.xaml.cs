@@ -1,5 +1,6 @@
 using redsix.ViewModels;
 using Syncfusion.Maui.Charts;
+using System.Collections.ObjectModel;
 
 namespace redsix.Views;
 
@@ -21,6 +22,7 @@ public partial class Graph : ContentPage
         series.EnableTooltip = true;
         series.ShowDataLabels = true;
         series.YBindingPath = "SalesRate";
+
         chart.Series.Add(series);
 
         Content = chart;

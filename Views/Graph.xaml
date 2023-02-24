@@ -19,9 +19,10 @@
         <chart:PieSeries ItemsSource="{Binding Data}" 
                     XBindingPath="Mood" 
                     YBindingPath="Frequency"
-                         ShowDataLabels="True"
-                         EnableAnimation="True"
-                         EnableTooltip="True"/>
+                    ShowDataLabels="True"
+                    EnableAnimation="True"
+                    EnableTooltip="True"
+                    PaletteBrushes="{Binding CustomBrushes}"/>
     </chart:SfCircularChart>
 
 </ContentPage>

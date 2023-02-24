@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,25 @@ namespace redsix.ViewModels
     {
         public string Product { get; set; }
         public double SalesRate { get; set; }
+    }
+
+    public class ViewModel
+    {
+        public ObservableCollection<Sales> Data { get; set; }
+        public List<Brush> CustomBrushes { get; set; }
+
+        public ViewModel()
+        {
+            Data = new ObservableCollection<Sales>(new GraphVm().Data);
+            CustomBrushes = new List<Brush>
+            {
+                new SolidColorBrush(Color.FromRgb(0, 0, 0)),
+                new SolidColorBrush(Color.FromRgb(0, 0, 0)),
+                new SolidColorBrush(Color.FromRgb(0, 0, 0)),
+                new SolidColorBrush(Color.FromRgb(0, 0, 0)),
+                new SolidColorBrush(Color.FromRgb(0, 0, 0))
+            };
+        }
     }
 
     class GraphVm
@@ -29,5 +49,5 @@ namespace redsix.ViewModels
         };
         }
     }
- 
+
 }
