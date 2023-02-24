@@ -58,6 +58,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="ViewModels\CameraVm.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Images\mood_circle_black.png" />
 	  <None Remove="Resources\Images\mood_circle_black_flat.png" />
 	  <None Remove="Resources\Images\mood_circle_blue.png" />
