@@ -23,12 +23,12 @@
         <Image Source="logo.png" WidthRequest="300" Margin="40,0,0,50"/>
 
         <!--User icon-->
-        <StackLayout>
-            <Frame BackgroundColor="#8CFF8A" HeightRequest="60" WidthRequest="60" CornerRadius="30" Padding="0" Margin="0,170,0,0" HorizontalOptions="Center">
-                <!--<Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill"/>-->
-                <Image Source="https://www.clipartmax.com/png/small/15-153139_big-image-login-icon-with-transparent-background.png" Aspect="AspectFill" />
+        <!--<StackLayout>
+            <Frame BackgroundColor="#8CFF8A" HeightRequest="60" WidthRequest="10" CornerRadius="30" Padding="0" Margin="0,170,0,0" HorizontalOptions="Center">
+                --><!--<Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill"/>--><!--
+                <Image Source="https://www.clipartmax.com/png/small/15-153139_big-image-login-icon-with-transparent-background.png" Aspect="AspectFit" />
             </Frame>
-        </StackLayout>
+        </StackLayout>-->
 
         <!--Greetings text-->
         <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
