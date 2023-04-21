@@ -7,5 +7,5 @@
 - Use the `Left` or `<` button and go through the carousel until it loops back to the first item.
 - If you continue going left, the binded image and text would stop changing.
 
-## Demo
+## Issue Demo
 ![](https://j.gifs.com/Og0wxY.gif)
