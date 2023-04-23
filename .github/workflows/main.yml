@@ -41,13 +41,13 @@ jobs:
         run: dotnet restore redsix.csproj
 
       - name: Build MAUI Android
-        run: dotnet publish redsix.csproj -c Release -f net7.0-android --no-restore
+        run: dotnet publish redsix.csproj -c Debug -f net7.0-android --no-restore
 
       - name: Upload Android Artifact
         uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8
         with:
           name: ToDoList-android-ci-build
-          path: R6-Playground-.Net-Maui/bin/Release/net7.0-android/*Signed.a*
+          path: R6-Playground-.Net-Maui/bin/Debug/net7.0-android/*Signed.a*
 
 
 # MAUI iOS Build
@@ -71,10 +71,10 @@ jobs:
         run: dotnet restore redsix.csproj
 
       - name: Build MAUI iOS
-        run: dotnet build redsix.csproj -c Release -f net7.0-ios --no-restore /p:buildForSimulator=True /p:packageApp=True /p:ArchiveOnBuild=False
+        run: dotnet build redsix.csproj -c Debug -f net7.0-ios --no-restore /p:buildForSimulator=True /p:packageApp=True /p:ArchiveOnBuild=False
 
       - name: Upload iOS Artifact
         uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8
         with:
           name: ToDoList-ios-ci-build
-          path: R6-Playground-.Net-Maui/bin/Release/net7.0-ios/iossimulator-x64/**/*.app
+          path: R6-Playground-.Net-Maui/bin/Debug/net7.0-ios/iossimulator-x64/**/*.app
