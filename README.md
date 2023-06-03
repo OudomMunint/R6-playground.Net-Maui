@@ -1,4 +1,4 @@
-# ![example workflow](https://github.com/oudommunint/R6-playground-.Net-Maui/actions/workflows/main.yml/badge.svg)
+# ![example workflow](https://github.com/oudommunint/R6-playground-.Net-Maui/actions/workflows/main.yml/badge.svg) ![maintenance-status](https://img.shields.io/badge/maintenance-actively--developed-brightgreen.svg)
 # PDS Redsix Local Dev environment
 ## To be merged with PDS.RedSix.App
 # Closed `09/02/2023`
